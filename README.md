@@ -26,10 +26,3 @@ MyDiary is a diary application that allows users to create, view, and filter dia
 - Node.js (version 12 or higher)
 - npm (Node package manager) or yarn
 
-### Installation
-
-1. **Clone the repository**:
-
-   ```bash
-   git clone https://github.com/your-username/mydiary.git
-   cd mydiary
