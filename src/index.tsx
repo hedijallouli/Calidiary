@@ -4,6 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import "@fontsource/ubuntu"; // Defaults to weight 400
+import "@fontsource/ubuntu/400.css"; // Specify weight
+import "@fontsource/ubuntu/400-italic.css";
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

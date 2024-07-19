@@ -1,38 +1,257 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-family: "Ubuntu";
+  background-color: #1a1e24;
+  background-image: url(https://calimoto.com/static/media/element_long.f351b1492ee1619ccec7.png);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  min-height: 100vh;
 }
 
-.App-link {
+body {
+  font-family: "Ubuntu";
+  margin: 0;
+}
+
+.HeaderBar * {
+  box-sizing: border-box;
+  font-weight: 300;
+}
+
+.HeaderBar {
+  align-items: center;
+  background-color: #2b3036;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  left: 0;
+  min-width: 280px;
+  position: relative;
+  width: 100%;
+  padding-left: 1.2rem;
+}
+.HeaderBar a {
+  text-decoration: none;
+  color: white;
+
+}
+
+.FooterWrapper {
+  background-color: #2b3036;
+  border-top: 2px solid #383d44;
+  box-sizing: border-box;
+  font-size: 15px;
+  padding: 24px 10px 20px;
+  width: 100%;
+}
+.label {
+  font-size: 0.8rem;
+}
+
+
+textarea {
+  resize: none;
+  width: 100%;
+  margin: 0.75rem 0;
+  box-sizing: border-box;
+  background-color: #2b3036;
+  border: 1px solid #383d44;
+  color: white;
+  padding: 0.5rem;
+  font-family: "Ubuntu";
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.list-of-entries, .entry-card {
+  flex: 1;
+  padding: 1.25rem;
+  box-sizing: border-box;
+}
+
+.entry-card {
+  background-color: #383d44;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-weight: 700;
+  margin: 1.25rem;
+}
+
+.entry-card .tags {
+  margin: 0.75rem 0;
+  padding: 0.5rem;
+}
+
+.card-content {
+  margin: 2rem 0;
+}
+.title {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.entry-block {
+  border: solid 1px #fff;
+  padding: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.entry-block:hover {
+  background-color: #4a4f57;
+}
+
+.add-entry-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #61dafb;
   color: #61dafb;
+  cursor: pointer;
+  height: 150px;
+  transition: background-color 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.add-entry-block:hover {
+  background-color: #3a3f47;
+}
+
+.add-button {
+  font-size: 2rem;
+}
+
+.entry-date {
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-align: left;
+}
+
+.entry-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.card-header, .tags {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.tags {
+  color: hsl(0, 0%, 20%)!important;
+}
+
+.card-header {
+  border-bottom: 1px solid #61dafb;
+  margin-bottom: 1rem;
+}
+
+.title, .content {
+  color: white;
+  font-size: 1.6em;
+  background-color: transparent;
+  border: none;
+}
+
+
+.content {
+  font-size: 1.2em;
+  height: auto;
+  min-height: 50vh;
+  overflow: hidden;
+}
+
+.tag {
+  font-size: 0.75rem;
+  margin: 0.5em;
+  padding: 0.4rem 1rem;
+  border-radius: 15%;
+  background-color: rgba(97, 218, 251, 0.5);
+}
+
+.previous, .next {
+  flex: 1;
+  cursor: pointer;
+  font-size: 0.8em;
+  text-align: left;
+  width: 100%;
+}
+
+.previous:hover, .next:hover {
+  text-decoration: underline;
+}
+
+.card-header h2 {
+  flex: 5;
+  cursor: pointer;
+}
+
+.card-header h2:hover {
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #dc3333;
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .entry-block {
+    height: auto;
   }
+
+  .add-entry-block {
+    height: auto;
+  }
+
+  .tags {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .previous, .next {
+    text-align: left;
+    width: 100%;
+  }
+
+  .title, .content {
+    font-size: 1.4em;
+  }
+}
+
+.css-13cymwt-control, .css-t3ipsp-control, .css-1nmdiq5-menu {
+  background: transparent !important;
+
+  color: white;
+  width: 100%;
+}
+
+
+.css-1nmdiq5-menu {
+  background: #1a1e24 !important;
+
 }
